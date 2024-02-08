@@ -5,14 +5,14 @@
     /// <summary>
     /// Возвращает объекты в пул по триггеру
     /// </summary>
-    [RequireComponent(typeof(Collider))]
-    public sealed class PoolObjectsBlocker : MonoBehaviour
+    [RequireComponent(typeof(Collider2D))]
+    public sealed class PoolObjectsBlocker2D : MonoBehaviour
     {
         private PoolObject _poolObject = default;
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (other.TryGetComponent(out _poolObject))
+            if (collision.TryGetComponent(out _poolObject))
             {
                 _poolObject.ReturnToPool();
             }
