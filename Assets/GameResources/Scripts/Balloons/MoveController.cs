@@ -1,4 +1,4 @@
-namespace Balloons.Features.Balloons
+п»їnamespace Balloons.Features.Balloons
 {
     using System;
     using System.Collections;
@@ -6,23 +6,23 @@ namespace Balloons.Features.Balloons
 
 
     /// <summary>
-    /// Перемещает объект в заданном направлении
+    /// РџРµСЂРµРјРµС‰Р°РµС‚ РѕР±СЉРµРєС‚ РІ Р·Р°РґР°РЅРЅРѕРј РЅР°РїСЂР°РІР»РµРЅРёРё
     /// </summary>
     [RequireComponent((typeof(Rigidbody2D)))]
     public class MoveController : MonoBehaviour
     {
         /// <summary>
-        /// Скорость движения объекта изменилась
+        /// РЎРєРѕСЂРѕСЃС‚СЊ РґРІРёР¶РµРЅРёСЏ РѕР±СЉРµРєС‚Р° РёР·РјРµРЅРёР»Р°СЃСЊ
         /// </summary>
         public event Action onSpeedChanged = delegate { };
         /// <summary>
-        /// Направление движения объекта изменилось
+        /// РќР°РїСЂР°РІР»РµРЅРёРµ РґРІРёР¶РµРЅРёСЏ РѕР±СЉРµРєС‚Р° РёР·РјРµРЅРёР»РѕСЃСЊ
         /// </summary>
         public event Action onDirectionChanged = delegate { };
 
 
         /// <summary>
-        /// Скорость движения объекта
+        /// РЎРєРѕСЂРѕСЃС‚СЊ РґРІРёР¶РµРЅРёСЏ РѕР±СЉРµРєС‚Р°
         /// </summary>
         public float Speed
         {
@@ -37,7 +37,7 @@ namespace Balloons.Features.Balloons
             }
         }
         /// <summary>
-        /// Нправление движения объекта
+        /// РќРїСЂР°РІР»РµРЅРёРµ РґРІРёР¶РµРЅРёСЏ РѕР±СЉРµРєС‚Р°
         /// </summary>
         public Vector2 Direction
         {
@@ -59,7 +59,6 @@ namespace Balloons.Features.Balloons
         protected Rigidbody2D rb = default;
         protected Coroutine coroutine = default;
 
-
         protected virtual void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -67,7 +66,7 @@ namespace Balloons.Features.Balloons
         }
 
         /// <summary>
-        /// Задать движение объекту
+        /// Р—Р°РґР°С‚СЊ РґРІРёР¶РµРЅРёРµ РѕР±СЉРµРєС‚Сѓ
         /// </summary>
         public virtual void Move()
         {
@@ -80,7 +79,7 @@ namespace Balloons.Features.Balloons
 
         }
 
-        protected IEnumerator MoveCoroutine()
+        protected virtual IEnumerator MoveCoroutine()
         {
             while (isActiveAndEnabled)
             {

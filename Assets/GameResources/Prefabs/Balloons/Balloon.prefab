@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7890312195952576790}
   - component: {fileID: 7890312195952576791}
+  - component: {fileID: 9022506839515288320}
   m_Layer: 0
   m_Name: BalloonImage
   m_TagString: Untagged
@@ -82,6 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9022506839515288320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890312195952576777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d0e7320562689488ea6590bc377cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setColorOnEnable: 1
 --- !u!1 &7890312196880499247
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +108,8 @@ GameObject:
   - component: {fileID: 7890312196880499245}
   - component: {fileID: 4670150051979763072}
   - component: {fileID: 7890312196880499244}
+  - component: {fileID: -2000305362705152134}
+  - component: {fileID: -3623397677322259238}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -109,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7890312196880499247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -42.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 7890312195952576790}
@@ -165,4 +181,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894b6bd5dcad3ff498705733f5fd6660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
+--- !u!114 &-2000305362705152134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890312196880499247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3710c694aac7b3648a41eb10743f9276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3623397677322259238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890312196880499247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188bf98215580f04aa6e489b746cd78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 1.5
+  maxScale: 4
+  scaleOnEnable: 1
