@@ -59,11 +59,9 @@
         protected Rigidbody2D rb = default;
         protected Coroutine coroutine = default;
 
-        protected virtual void Start()
-        {
-            rb = GetComponent<Rigidbody2D>();
-            Move();
-        }
+        protected virtual void Awake() => rb = GetComponent<Rigidbody2D>();
+
+        protected virtual void OnEnable() => Move();
 
         /// <summary>
         /// Задать движение объекту
