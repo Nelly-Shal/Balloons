@@ -20,7 +20,6 @@
         /// </summary>
         public event Action onDirectionChanged = delegate { };
 
-
         /// <summary>
         /// Скорость движения объекта
         /// </summary>

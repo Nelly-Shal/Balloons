@@ -33,7 +33,7 @@
             float g = Random.Range(0f, 1f);
             float b = Random.Range(0f, 1f);
 
-            randomColor = new Color(r, g, b);
+            randomColor = new Color(r, g, b, spriteRenderer.color.a);
 
             spriteRenderer.color = randomColor;
         }
