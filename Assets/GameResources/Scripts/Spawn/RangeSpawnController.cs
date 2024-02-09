@@ -31,6 +31,7 @@ namespace Balloons.Features.Spawn
 
         protected virtual void OnEnable()
         {
+            nextSpawn = Random.Range(minDelay, maxDelay);
             if (spawnOnEnable)
             {
                 StartSpawn();

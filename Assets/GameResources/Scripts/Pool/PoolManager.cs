@@ -14,7 +14,6 @@
         [Serializable]
         public struct PoolPart
         {
-
             public string Name;
             public int Count;
             public PoolObject Prefab;
